@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+  --bg: #ffffff;
+  --text: #1a1a1a;
+  --muted: #49557e;
+  --card: #ffffff;
+  --border: rgba(0,0,0,0.08);
+  --accent: #ff7a45; /* warm orange */
+  --hover: rgba(0,0,0,0.04);
+  --shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+[data-theme="dark"]{
+  --bg: #000000;        /* pure black */
+  --text: #ffffff;      /* pure white */
+  --muted: #ffffff;     /* icons/links white */
+  --card: #000000;      /* all surfaces black */
+  --border: rgba(255,255,255,0.2); /* visible borders in dark mode */
+  --accent: #ff7a45;    /* warm orange */
+  --hover: transparent; /* avoid grey hovers */
+  --shadow: none;       /* no drop shadows in strict black */
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Outfit;
+  scroll-behavior: smooth;
+}
+body{
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
+.app{
+  width: min(80%, 1200px);
+  margin: 0 auto;
+  padding: 0 2vw;
+}
+
+/* Fluid base type scale */
+html{ font-size: clamp(14px, 1.2vw, 16px); }
+
+/* Breakpoints for container width */
+@media (max-width: 1200px){
+  .app{ width: min(88%, 1100px); }
+}
+@media (max-width: 992px){
+  .app{ width: 92%; }
+}
+@media (max-width: 768px){
+  .app{ width: 94%; padding: 0 3vw; }
+}
+@media (max-width: 480px){
+  .app{ width: 96%; padding: 0 4vw; }
+}
+
+/* Light/Dark surface helpers for common sections */
+.header,
+.explore-menu,
+.food-display,
+.food-item,
+.footer,
+.navbar,
+.login-popup{
+  background-color: var(--card);
+  color: var(--text);
+}
+
+/* Borders adapt to theme */
+hr{ border-color: var(--border); }
+
+@keyframes fadeIn {
+  0%{
+    opacity:0;
+  }
+  100%{
+    opacity:1;
+  }
+}

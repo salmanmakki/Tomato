@@ -1,0 +1,74 @@
+.food-item{
+    width: 100%;
+    margin: auto;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    background: var(--card);
+    transition: 0.3s;
+    animation: fadeIn 1s;
+    border: 1px solid var(--border);
+}
+.food-item-image{
+    width: 100%;
+    border-radius: 15px 15px 0px 0px;
+}
+.food-item-info{
+    padding: 20px;
+}
+.food-item-name-rating{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.food-item-name-rating p{
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--text);
+}
+.food-item-name-rating img{
+    width: 70px;
+}
+/* support both .food-item-desc and the component's current .food-item-desk */
+.food-item-desc,
+.food-item-desk{
+    color: var(--muted);
+    font-size: 12px;
+}
+.food-item-price{
+    color: var(--accent);
+    font-size: 22px;
+    font-weight: 500;
+    margin: 10px 0px;
+}
+.food-item-img-container{
+    position: relative;
+}
+.food-item-img-container .add{
+    width: 35px;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+.food-item-counter{
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 6px;
+    border-radius: 50px;
+    background-color: var(--card);
+    border: 1px solid var(--accent);
+}
+.food-item-counter img{
+    width: 30px;
+}
+.food-item-counter p{
+    color: var(--text);
+    min-width: 16px;
+    text-align: center;
+}
